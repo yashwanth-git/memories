@@ -30,14 +30,11 @@ const Home = () => {
   const page = query.get("page") || 1;
   const searchQuery = query.get("searchQuery");
   const tag = query.get("tags");
-  console.log(useLocation().search);
-  console.log(searchQuery);
 
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
   useEffect(() => {
     if (searchQuery || tag) {
-      console.log("in");
       dispatch(getPostsBySearch({ search: searchQuery, tags: tag }));
     } else {
       dispatch(getPosts());

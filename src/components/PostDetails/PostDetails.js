@@ -17,7 +17,6 @@ const PostDetails = () => {
   const history = useHistory();
   const classes = useStyles();
   const { id } = useParams();
-  console.log(all);
   useEffect(() => {
     dispatch(getPost(id));
   }, [id]);

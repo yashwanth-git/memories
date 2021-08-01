@@ -44,7 +44,7 @@ const Post = ({ post, setCurrentId }) => {
 
     return (
       <>
-        <ThumbUpAltOutlined fontsize="small" />
+        <ThumbUpAltOutlined fontSize="small" />
         &nbsp;Like
       </>
     );

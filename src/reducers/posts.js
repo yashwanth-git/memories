@@ -23,7 +23,6 @@ const posts = (state = { isLoading: true, posts: [] }, action) => {
         numberOfPages: action.payload.numberOfPages,
       };
     case FETCH_POST:
-      console.log(action.payload);
       return { ...state, post: action.payload };
     case FETCH_BY_SEARCH:
       return {

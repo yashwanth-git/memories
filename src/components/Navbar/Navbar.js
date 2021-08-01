@@ -3,7 +3,6 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { AppBar, Toolbar, Typography, Button, Avatar } from "@material-ui/core";
 import useStyles from "./styles";
-import memories from "../../images/memories.png";
 import memoriesLogo from "../../images/memoriesLogo.png";
 import memoriesText from "../../images/memoriesText.png";
 import decode from "jwt-decode";
@@ -21,7 +20,7 @@ const Navbar = () => {
     }
 
     setUser(JSON.parse(localStorage.getItem("profile")));
-  }, [location]);
+  }, [location, user]);
   const history = useHistory();
   const dispatch = useDispatch();
   const logout = () => {
